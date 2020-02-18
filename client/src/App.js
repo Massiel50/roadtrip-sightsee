@@ -1,11 +1,11 @@
 // import React, { Component } from "react";
 import React from "react";
-import Map from "./components/API/map"
+// import Map from "./components/API/map"
 import "./App.css";
-import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import home from "./components/Pages/home";
-import search from "./components/Pages/search";
+import search from "./components/Pages/searchResult";
+import NavTabs from "./components/Pages/navTab"
 
 
 function App() {
@@ -17,12 +17,11 @@ function App() {
       </div>
       <Router>
       <div>
-        <NavTabs />
         <Route exact path="/" component={home} />
         <Route exact path="/search" component={search} />
       </div>
     </Router>
-
+   
     </div>
   );
 }
