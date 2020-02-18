@@ -29,13 +29,17 @@ src="https://www.google.com/maps/embed/v1/directions?origin=...&destination=...&
 
 import axios from "axios";
 
-const BASEURL = "https://api.giphy.com/v1/gifs/search?q=";
-const APIKEY = "&api_key=dc6zaTOxFJmzC&limit=20";
+const BASEURL = "https://maps.googleapis.com/maps/api/directions/json"
+let origin = "?origin=" + "Disneyland"
+let destination = "&destination=" + "Universal+Studios+Hollywood&key="
+const APIKEY = "AIzaSyDJZVKAh9W4Op0a4i7YnnQ8L4TG7IbdUu4";
 
-// Export an object with a "search" method that searches the Giphy API for the passed query
+
+
+// Export an object with a "search" method that searches the API for the passed query
 export default {
-  search: function(query) {
-    return axios.get(BASEURL + query + APIKEY);
+  search: function() {
+    return axios.get(BASEURL + origin + destination + APIKEY);
   }
 };
 

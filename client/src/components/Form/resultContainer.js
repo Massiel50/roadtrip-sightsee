@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchForm from "./searchForm";
 import ResultList from "./resultList";
-import API from "../utils/API";
+import API from "../API/map";
 
 class SearchResultContainer extends Component {
   state = {

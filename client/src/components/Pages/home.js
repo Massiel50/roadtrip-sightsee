@@ -1,5 +1,5 @@
 import React from "react";
-import SearchForm from "./searchForm";
+import SearchForm from "../Form/searchForm";
 
 function Home(props) {
   return (
@@ -8,11 +8,6 @@ function Home(props) {
               <SearchForm/>
           </div>
 
-      <div>
-        <a href="#home" onClick={() => props.handlePageChange("Home")} className="nav-link">
-          Home
-        </a>
-      </div>
       </div>
   );
 }

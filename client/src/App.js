@@ -4,8 +4,8 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import home from "./components/Pages/home";
-import search from "./components/Pages/searchResult";
-import NavTabs from "./components/Pages/navTab"
+import searchResult from "./components/Form/resultContainer";
+
 
 
 function App() {
@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       
       <div className="App-header">
-        <h2>Welcome to React</h2>
+        <h2>I can SHOW you the WORLD!...</h2>
       </div>
       <Router>
       <div>
         <Route exact path="/" component={home} />
-        <Route exact path="/search" component={search} />
+        <Route exact path="/search" component={searchResult} />
       </div>
     </Router>
    
