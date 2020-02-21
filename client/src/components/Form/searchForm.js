@@ -18,17 +18,6 @@ function SearchForm(props) {
           placeholder="Your place of Origin"
           id="search"/>
           </div>
-        {/* second input for desination */}
-        <div className= "destInput">
-        <input
-          onChange={props.handleInputChange}
-          value={props.search2}
-          name="search"
-          type="text"
-          className="form-control"
-          placeholder="Your Destination"
-          id="search"/>
-          </div>
         <button href="#home"onClick={() => props.handlePageChange("searchResult")} className="btn btn-primary mt-3">
           Search
         </button>
