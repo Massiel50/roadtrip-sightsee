@@ -1,29 +1,22 @@
 import React from "react";
-import API from "../API/map";
+
 import { GoogleApiWrapper } from "google-maps-react";
 
-function SearchForm(props) {
+export function SearchForm(props) {
   return (
-    <form>
+  
       <div className="form-group">
-        <label htmlFor="search">Where would you like to go?:</label>
-        {/* first inout for point of origin */}
-        <div className= "origInput">
-        <input
-          onChange={props.handleInputChange}
-          value={props.search1}
-          name="search"
-          type="text"
-          className="form-control"
-          placeholder="Your place of Origin"
-          id="search"/>
+        <label htmlFor="search">Where would you like to go sight see?:</label>
+        {/*  input for place  */}
+        <div className= "PlaceInput">
+        <textarea
+          className="form-control"placeholder="Your place of Origin"/>
           </div>
         <button href="#home"onClick={() => props.handlePageChange("searchResult")} className="btn btn-primary mt-3">
-          Search
+          {props.children}
         </button>
-        <GoogleApiWrapper/>
       </div>
-    </form>
+
   );
 }
 
