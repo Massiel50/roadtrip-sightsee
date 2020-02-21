@@ -7,6 +7,7 @@ function Map(props) {
       <div>
           <NavTabs/>
         <SearchResultContainer/>
+        
       </div>
   );
 }

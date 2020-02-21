@@ -3,20 +3,23 @@ import SearchForm from "./searchForm";
 import ResultList from "./resultList";
 import API from "../API/map";
 
+
+
 class SearchResultContainer extends Component {
   state = {
-    search: "",
+    Origin: "",
+    Destination: "",
     results: []
   };
 
-  // When this component mounts, search the Giphy API for pictures of kittens
+  // When this component mounts, search the  API
   componentDidMount() {
-    this.searchGiphy("kittens");
+    this.searchGiphy("orlando", "Jacksonville");
   }
 
   searchGiphy = query => {
     API.search(query)
-      .then(res => this.setState({ results: res.data.data }))
+      .then(res => this.setState({ results: res }))
       .catch(err => console.log(err));
   };
 
@@ -31,18 +34,21 @@ class SearchResultContainer extends Component {
   // When the form is submitted, search the Giphy API for `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchGiphy(this.state.search);
+    this.searchGiphy(this.state.Origin);
+    this.searchGiphy(this.state.Destination);
   };
 
   render() {
     return (
       <div>
         <SearchForm
-          search={this.state.search}
+          Origin={this.state.Origin}
+          Destination={this.state.Destination}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
         <ResultList results={this.state.results} />
+        
       </div>
     );
   }
