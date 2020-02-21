@@ -1,7 +1,5 @@
 import React from "react";
 
-import { GoogleApiWrapper } from "google-maps-react";
-
 export function SearchForm(props) {
   return (
   
@@ -19,5 +17,3 @@ export function SearchForm(props) {
 
   );
 }
-
-export default SearchForm;

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component, createRef } from "react";
 import NavTabs from "./navTab"
-import SearchResultContainer from "../Form/resultContainer"
+
+
 
 function Map(props) {
   return (
