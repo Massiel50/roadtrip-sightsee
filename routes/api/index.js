@@ -7,8 +7,8 @@ const loginController = require("../../controller/logIn");
 // api routes for user auth
 router.route("/signup").post(loginController.signUp);
 router.route("/signin").post(loginController.signIn);
-router.route("/verify").post(loginController.verify);
-router.route("/logout").post(loginController.logout);
+// router.route("/verify").post(loginController.verify);
+// router.route("/logout").post(loginController.logout);
 
 // router.use("/places", placeRoutes);
 
