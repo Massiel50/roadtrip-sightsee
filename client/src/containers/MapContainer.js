@@ -87,10 +87,10 @@ class MapsContainer extends Component {
   // With the constraints, find places 
   handleSearch = (() => {
     const { markers, constraints, placesService, directionService, mapsApi } = this.state;
-    if (markers.length === 0) {
-      message.warn('try again!');
-      return;
-    }
+    // if (markers.length === 0) {
+    //   message.warn('try again!');
+    //   return;
+    // }
     const filteredResults = [];
     const marker = markers[0];
     const timeLimit = constraints[0].time;
@@ -124,7 +124,7 @@ class MapsContainer extends Component {
         // Second, For each iceCreamPlace, check if it is within acceptable travelling distance
         const directionRequest = {
           origin: markerLatLng,
-          destination: address, // Address of ice cream place
+          destination: address, // Address of place
           travelMode: 'DRIVING',
         }
         directionService.route(directionRequest, ((result, status) => {
@@ -179,7 +179,7 @@ class MapsContainer extends Component {
                       iconType="car"
                       value={time}
                       onChange={(value) => this.updateConstraintTime(key, value)}
-                      text="Minutes away by car"
+                      // text="Minutes away by car"
                     />
                     <Divider />
                   </div>
