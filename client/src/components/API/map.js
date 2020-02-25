@@ -3,13 +3,10 @@
 import React, { Component, createRef } from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
-
-
 // const BASEURL = "https://maps.googleapis.com/maps/api/directions/json"
 // let origin = "?origin=" + "Toronto"
 // let destination = "&destination=" + "Montreal"
 const APIKEY = "&key=AIzaSyDJZVKAh9W4Op0a4i7YnnQ8L4TG7IbdUu4";
-
 
 // Export an object with a "search" method that searches the API for the passed query
 // export default {
@@ -24,8 +21,6 @@ const APIKEY = "&key=AIzaSyDJZVKAh9W4Op0a4i7YnnQ8L4TG7IbdUu4";
 //   console.log(res.data.geocoded_waypoints)
 // });
 
-
-
 class AppMap extends Component {
     get AppMapDiv(){
         return document.getElementById("google-map")
@@ -34,11 +29,13 @@ class AppMap extends Component {
 
  render() {
  return (
+     <div>
  <div
  id= "google-map"
  reg= {this.googleMapRef}
  style= {{width: "400px", height: "300px"}} />
-//  <Map google={this.props.google} />
+ <Map google={this.props.google} />
+ </div>
  )
  }
  createGoogleMap = () =>

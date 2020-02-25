@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const loginController = require("../../controllers/loginController");
+const loginController = require("../../controller/logIn");
 
 const placeRoutes = require("./places");
 
