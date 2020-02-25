@@ -88,7 +88,7 @@ class MapsContainer extends Component {
   handleSearch = (() => {
     const { markers, constraints, placesService, directionService, mapsApi } = this.state;
     if (markers.length === 0) {
-      message.warn('Add a constraint and try again!');
+      message.warn('try again!');
       return;
     }
     const filteredResults = [];
