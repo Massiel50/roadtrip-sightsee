@@ -1,6 +1,6 @@
 const db = require("../models");
-const User = require("../models/User");
-const UserProfile = require("../models/UserProfile");
+// const User = require("../models/User");
+// const UserProfile = require("../models/UserProfile");
 
 module.exports = {
   signUp: (req, res) => {
