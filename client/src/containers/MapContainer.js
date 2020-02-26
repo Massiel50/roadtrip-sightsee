@@ -6,6 +6,7 @@ import PlaceCard from '../components/PlaceCard';
 import ConstraintSlider from '../components/ConstraintSlider';
 
 import { Button, Input, Divider, message } from 'antd';
+i
 
 const Start_Coord = { lat: 28.538336, lng: -81.379234 };
 
@@ -191,7 +192,7 @@ class MapsContainer extends Component {
         </section>
 
         {/* Maps Section */}
-        <section className="col-8 h-lg">
+        <section className="col-8 h-lg mapSquare">
           <GoogleMapReact
             bootstrapURLKeys={{
               key: 'AIzaSyDJZVKAh9W4Op0a4i7YnnQ8L4TG7IbdUu4',
