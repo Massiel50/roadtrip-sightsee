@@ -7,7 +7,7 @@ class MapAutoComplete extends Component {
     this.state = {
       suggestionts: [],
       dataSource: [],
-      singaporeLatLng: this.props.singaporeLatLng,
+      orlandoLatLng: this.props.orlandoLatLng,
       autoCompleteService: this.props.autoCompleteService,
       geoCoderService: this.props.geoCoderService,
     }

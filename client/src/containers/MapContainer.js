@@ -131,7 +131,7 @@ class MapsContainer extends Component {
         directionService.route(directionRequest, ((result, status) => {
           if (status !== 'OK') { return }
           const travellingRoute = result.routes[0].legs[0]; // { duration: { text: 1mins, value: 600 } }
-          const travellingTimeInMinutes = travellingRoute.duration.value / 60;
+          const travellingTimeInMinutes = travellingRoute.duration.value / 100
           if (travellingTimeInMinutes < timeLimit) {
             const distanceText = travellingRoute.distance.text; // 6.4km
             const timeText = travellingRoute.duration.text; // 11 mins
